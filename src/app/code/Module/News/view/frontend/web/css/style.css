@@ -1,0 +1,55 @@
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.item {
+    display: flex;
+    cursor: pointer;
+    flex-direction: row;
+    margin-bottom: 30px; /* Tăng khoảng cách giữa các mục tin tức */
+    padding: 20px; /* Tăng padding để làm cho mục tin tức trông lớn hơn */
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    transition: background-color 0.3s ease;
+}
+
+.item:hover {
+    background-color: #e0e0e0;
+}
+
+.item-image {
+    flex: 0 0 auto;
+    margin-right: 15px; /* Tăng margin-right để tạo khoảng cách giữa hình ảnh và nội dung */
+}
+
+.item-image img {
+    max-width: 200px; /* Tăng kích thước hình ảnh */
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.item-content {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.item-title {
+    font-weight: bold;
+    font-size: 20px; /* Tăng font-size cho tiêu đề */
+    margin-bottom: 10px; /* Tăng khoảng cách dưới tiêu đề */
+}
+
+.item-description {
+    font-size: 16px; /* Tăng font-size cho mô tả */
+    color: #666;
+    margin-top: 5px;
+}
+
+.item-pubDate {
+    font-size: 14px; /* Tăng font-size cho ngày xuất bản */
+    color: #888;
+    margin-top: auto;
+}

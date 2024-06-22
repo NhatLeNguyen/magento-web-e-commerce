@@ -1,0 +1,46 @@
+<?php
+
+$rateData = $block->getPriceRate();
+$i = 1;
+
+?>
+<div class='container'>
+    <h2 style="font-weight: bold;">Currency rate</h2>
+    <h3 style="margin-bottom: 10px;align-self:center;">Currency exchange rate from Vietcombank on <?= $block->escapeHtml($rateData->DateTime) ?></h3>
+    <table class="rate-table">
+        <thead>
+            <tr bgcolor="#48aaad">
+                <th style="text-align: center;">Currency code</th>
+                <th style="text-align: center;">Currency name</th>
+                <th style="text-align: center;">Cash buying rate</th>
+                <th style="text-align: center;">Transfer buying rate</th>
+                <th style="text-align: center;">Selling</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <?php foreach ($rateData->Exrate as $key => $rate) : ?>
+                <tr>
+                    <td style="padding-left: 48px;">
+                        <span>
+                            <picture style="vertical-align: middle;">
+                                <img style="border-radius: 10px; margin-right: 0.75rem;" src="https://wise.com/public-resources/assets/flags/rectangle/<?php echo strtolower($block->escapeHtml($rate->attributes()['CurrencyCode'])); ?>.png" style="width: 25;height:auto;"/>
+                            </picture>
+                            <?= $block->escapeHtml($rate->attributes()['CurrencyCode']) ?>
+                        </span>
+                    </td>
+                    <!-- <td><img src="https://wise.com/public-resources/assets/flags/rectangle/<?php echo strtolower($block->escapeHtml($rate->attributes()['CurrencyCode'])); ?>.png" style="width: 25;height:auto;"/></td> -->
+                    <td style="text-align: center;"><?= $block->escapeHtml($rate->attributes()['CurrencyName']) ?></td>
+                    <td style="text-align: center;"><?= $block->escapeHtml($rate->attributes()['Buy']) ?></td>
+                    <td style="text-align: center;"><?= $block->escapeHtml($rate->attributes()['Transfer']) ?></td>
+                    <td style="text-align: center;"><?= $block->escapeHtml($rate->attributes()['Sell']) ?></td>
+                </tr>
+            <?php $i++;
+            endforeach; ?>
+        </tbody>
+    </table>
+</div>
+
+<script>
+
+</script>
