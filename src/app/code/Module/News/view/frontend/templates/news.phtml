@@ -6,20 +6,20 @@ $i = 1;
 ?>
 
 <div class='container'>
-    <h2 style="font-weight: bold;">Tin tức kinh doanh mới cập nhật</h2>
+    <h2 style="font-weight: bold;">News</h2>
     <?php foreach ($newsData->channel->item as $key => $news) : ?>
-        <div class="item" onclick="window.open('<?= $block->escapeHtml($news->link) ?>', '_blank').focus()">
-            <div class="item-image">
+        <div class="news-item" onclick="window.open('<?= $block->escapeHtml($news->link) ?>', '_blank').focus()">
+            <div class="news-item-image">
                 <img src="<?= $news->image ?>" />
             </div>
-            <div class="item-content">
-                <div class="item-title">
+            <div class="news-item-content">
+                <div class="news-item-title">
                     <?= $block->escapeHtml($news->title) ?>
                 </div>
-                <div class="item-description">
+                <div class="news-item-description">
                     <?= $news->realDescription ?>
                 </div>
-                <div class="item-pubDate">
+                <div class="news-item-pubDate">
                     <?= $block->escapeHtml($news->pubDate) ?>
                 </div>
             </div>
