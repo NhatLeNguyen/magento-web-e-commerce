@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9a3edb90f29c702e7c10ad3c482d9730",
+    "content-hash": "b93b99eccd75062e020f9a24209df736",
     "packages": [
         {
             "name": "2tvenom/cborencode",
@@ -4810,6 +4810,50 @@
                 }
             ],
             "time": "2024-01-28T23:22:08+00:00"
+        },
+        {
+            "name": "livechat/module-magento-livechat",
+            "version": "2.4.10",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/livechat/magento-livechat.git",
+                "reference": "1560a29e0baa4ee7abc02b82b8c761f529a67781"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/livechat/magento-livechat/zipball/1560a29e0baa4ee7abc02b82b8c761f529a67781",
+                "reference": "1560a29e0baa4ee7abc02b82b8c761f529a67781",
+                "shasum": ""
+            },
+            "require": {
+                "magento/framework": "100.*|101.*|102.*|103.*",
+                "magento/module-backend": "100.*|101.*|102.*",
+                "magento/module-checkout": "100.*",
+                "magento/module-config": "100.*|101.*",
+                "magento/module-customer": "100.*|101.*|102.*|103.*",
+                "magento/module-sales": "100.*|101.*|102.*|103.*",
+                "magento/module-store": "100.*|101.*",
+                "php": "~5.5.0|~5.6.0|^7.0.0|^8.1.0"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "LiveChat\\LiveChat\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "OSL-3.0",
+                "AFL-3.0"
+            ],
+            "support": {
+                "issues": "https://github.com/livechat/magento-livechat/issues",
+                "source": "https://github.com/livechat/magento-livechat/tree/v2.4.10"
+            },
+            "time": "2024-05-28T13:06:54+00:00"
         },
         {
             "name": "magento/adobe-stock-integration",

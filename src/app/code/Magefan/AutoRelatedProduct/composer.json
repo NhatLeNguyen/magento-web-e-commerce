@@ -1,0 +1,17 @@
+{
+    "name": "magefan/module-auto-related-product",
+    "description": "Extend native Magento Up-Sells, Cross-Sells, and Related products",
+    "type": "magento2-module",
+    "version": "2.3.2",
+    "require": {
+        "magefan/module-community" : ">=2.1.28"
+    },
+    "autoload": {
+        "psr-4": {
+            "Magefan\\AutoRelatedProduct\\": ""
+        },
+        "files": [
+            "registration.php"
+        ]
+    }
+}
